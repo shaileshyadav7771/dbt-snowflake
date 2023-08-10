@@ -1,18 +1,11 @@
 #!/usr/bin/env python
 import os
-import sys
 import re
-
-# require python 3.8 or newer
-if sys.version_info < (3, 8):
-    print("Error: dbt does not support this version of Python.")
-    print("Please upgrade to Python 3.8 or higher.")
-    sys.exit(1)
+from setuptools import setup
+import sys
 
 
 # require version of setuptools that supports find_namespace_packages
-from setuptools import setup
-
 try:
     from setuptools import find_namespace_packages
 except ImportError:
@@ -79,7 +72,6 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: POSIX :: Linux",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
